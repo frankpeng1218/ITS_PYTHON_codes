@@ -2,86 +2,84 @@
 
 # 重點複習 P6-2 ~ 6-3
 #------------------------#
-##dict_1 = {"frank": "坦率的", "Apple": "蘋果",
-##          "banana": 50, "cherry": 100.3,
-##          "train": [1, 4, 6], "Yes": True,
-##          "dict123": {"frank": "超帥", "承諺": False}}
+# 建立字典的方式
+##dict_1 = {"frank": "honest", "Apple": 100}
 ##print(dict_1)
 ##
-##dict_2 = dict([["frank", "帥哥"], ["雨翔", "小帥哥"]])
+##dict_2 = dict([["frank", "honest"], ["Apple", 100]])
 ##print(dict_2)
 ##
-##dict_3 = dict(frank="帥哥", 雨翔="小帥")
+##dict_3 = dict(frank="honest", Apple=100)
 ##print(dict_3)
-
 #------------------------#
-# 重點複習 字典取值 P6-3
-##dict_4 = {"frank": "坦率的", "Apple": 123}
+
+# 重點複習 P6-3
+#------------------------#
+# 字典取值
+##dict_4 = {"frank": "honest", "Apple": 100}
 ##print(dict_4["frank"])
 ##print(dict_4["Apple"])
-
 #------------------------#
-# 重點複習 字典的鍵不存在 P6-4 ~ 6-5
-##dict_5 = {"frank": "坦率的", "Apple": 123}
-### print(dict_5["Henry"]) # error
-##print(dict_5.get("Henry", "找不到")) # 找字典有沒有"Henry"
 
-
+# 重點複習 P6-4 ~ 6-5
 #------------------------#
-# 重點複習 字典維護 P6-6
-# 修改值的方式
-##dict_6 = {"Apple": 20, "Banana": 30, "Dragonfruit": 60}
-##print("原本Apple的價錢:", dict_6["Apple"])
-##dict_6["Apple"] = 120
-##print("後來Apple的價錢:", dict_6["Apple"])
+# 字典的鍵不存在
+##dict_5 = {"frank": "honest", "Apple": 100}
+### print(dict_5["Banana"]) # error
+### 找字典是否有這個key
+##print(dict_5.get("Amy")) # 如果沒有"Amy"這個key的話,會印出"None"
+##print(dict_5.get("Amy", "找不到"))# 如果沒有"Amy"這個key的話,會印出"找不到"
+#------------------------#
+
+# 重點複習 P6-6
+#------------------------#
+# 字典維護
+# 修改value的方式
+##dict_6 = {"frank": "honest", "Apple": 100}
+##print("原本的:", dict_6)
+##dict_6["Apple"] = 200
+##print("後來的:", dict_6)
+##
 ### 新增key-value的方式
-##print("原本的dict_6:", dict_6)
-##dict_6["Cherry"] = 200
-##print("新增Cherry後的dict_6:", dict_6)
+##dict_7 = {"frank": "honest", "Apple": 100}
+##print("原本的:", dict_7)
+##dict_7["Amy"] = "Frank's GF"
+##print("後來的:", dict_7)
 
-
-#------------------------#
-# 重點複習 字典維護 P6-7
 # 刪除的方式
-##dict_7 = {"Apple": 20, "Banana": 30, "Dragonfruit": 60}
-##print("刪除前:", dict_7)
-##del dict_7["Banana"]
-##print("刪除後:", dict_7)
-##
+##dict_8 = {"frank": "honest", "Apple": 100}
+##print("原本的:", dict_8)
+##del dict_8["Apple"]
+##print("後來的:", dict_8)
 ### clear()
-##dict_7.clear()
-##print("clear()後:", dict_7)
-##
-### del整個字典
-##del dict_7
-##print("del 整個字典後:", dict_7) # Nameerror因為被刪掉了
-
+##print("原本的:", dict_8)
+##dict_8.clear()
+##print("後來的:", dict_8)
+### del 整個字典
+##print("原本的:", dict_8)
+##del dict_8
+##print("後來的:", dict_8) # error 因為你已經刪掉了
 #------------------------#
-# 重點複習 字典進階操作 P6-8
+
+# 重點複習 P6-8
+#------------------------#
 # 檢查「鍵」是否存在
-dict_8 = {"Apple": 20, "Banana": 30, "Dragonfruit": 60}
-if "Apple" in dict_8:
-    print("Apple是dict_8的key")
-else:
-    print("Apple不是dict_8的key")
+##dict_9 = {"frank": "honest", "Apple": 100}
+##if "Apple" in dict_9:
+##    print("Yes Apple是dict_9的key")
+##else:
+##    print("No Apple不是dict_9的key")
+### 取得以「鍵」為元素的組合
+### 取得「值」為元素的組合
+##print(dict_9.keys())
+##print(dict_9.values())
+#------------------------#
 
-# 取得以「鍵」為元素的組合
-print(dict_8.keys())
-# 取得「值」為元素的組合
-print(dict_8.values())
-
-# 重點複習 字典進階操作 P6-8 ~ 6-9
-print("Apple" in dict_8)
-print("Cindy" in dict_8)
-
-
-
-
-
-
-
-
-
-
+# 重點複習 P6-8 ~ 6-9
+#------------------------#
+# 檢查字典中的「鍵」是否存在
+dict_10 = {"frank": "honest", "Apple": 100}
+print("Apple" in dict_10)
+print("Amy" in dict_10)
 
 
